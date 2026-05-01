@@ -24,5 +24,5 @@ We analyzed a recent macOS-focused campaign by the North Korean group Sapphire S
 | **Collection** | Data from Local System (T1005) | A script collected local data including Chromium browser profiles, Telegram desktop session files, Apple Notes, and SSH keys. | [T1005](https://attack.mitre.org/techniques/T1005/) |
 | **Exfiltration** | Archive Collected Data: Utility (T1560.001) | The collected data was zipped into archives inside the `/tmp/` directory before being uploaded to the attacker's C2 server using `curl` with `nohup`. | [T1560.001](https://attack.mitre.org/techniques/T1560/001/) |
 
-## Insights / What You Learned
+
 This lab showed us how effective "Living off the Land" (LotL) attacks are. The threat actor didn't need a crazy exploit; they just used built-in Mac tools like `curl`, `zip`, `sqlite3`, and `osascript`. We also saw that strong OS protections like TCC can be completely bypassed if the attacker manages to trick the user into granting that initial execution foothold.
